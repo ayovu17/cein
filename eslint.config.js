@@ -6,4 +6,9 @@ export default antfu({
   stylistic: true,
   imports: true,
   extends: ['plugin:storybook/recommended'],
+
+}, {
+  rules: {
+    'eslint-comments/no-unlimited-disable': 'off',
+  },
 })
