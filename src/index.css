@@ -1,1 +1,6 @@
 @import 'tailwindcss';
+
+@theme {
+  /* DURATION */
+  --duration-button: 300ms;
+}
