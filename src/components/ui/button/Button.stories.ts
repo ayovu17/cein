@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { SearchIcon } from '@/components/ui/icon/Search'
+import { SearchIcon } from '@/components/ui'
 import { Button } from './Button'
 
 const meta = {
