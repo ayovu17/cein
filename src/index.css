@@ -1,6 +1,40 @@
+@font-face {
+  font-family: StyreneA;
+  font-style: normal;
+  font-weight: 100 400;
+  font-display: swap;
+  src: url("./assets/fonts/StyreneA.otf");
+}
+
 @import 'tailwindcss';
 
 @theme {
+  /* FONTS */
+  --font-styrene-a: StyreneA, sans-serif;
+
+  /* FONT SIZES */
+  --text100: 11px;
+  --leading100: 20px;
+
+  --text300: 13px;
+  --leading300: 20px;
+
+  --text400: 15px;
+  --leading400: 20px;
+
+  --text500: 16px;
+  --leading500: 22px;
+
+  --text600: 18px;
+  --leading600: 24px;
+
+  --text900: 24px;
+  --leading900: 32px;
+
   /* DURATION */
   --duration-button: 300ms;
+}
+
+html {
+  @apply font-styrene-a ;
 }
