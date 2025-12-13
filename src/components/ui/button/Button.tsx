@@ -29,7 +29,7 @@ export function Button({
     cursor-pointer`,
     variant === 'contain' && color === 'white' && !Icon && 'bg-neutral-100 text-neutral-700 hover:bg-neutral-50',
     variant === 'contain' && color === 'black' && !Icon && 'bg-neutral-900 text-neutral-100 hover:bg-neutral-800',
-    variant === 'text' && 'bg-none text-neutral-800 hover:text-neutral-500',
+    variant === 'text' && 'w-auto h-auto bg-none text-neutral-800 hover:text-neutral-500',
     Icon && 'p-1 w-auto h-auto bg-none',
     className,
   )
