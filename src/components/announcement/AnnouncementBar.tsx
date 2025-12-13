@@ -1,4 +1,4 @@
-import { Typography } from '@/components/ui'
+import { Typography } from '@/components'
 
 const mockData = {
   mobile: 'The Archive Sale is live. Starting at 20% off. Show now',

@@ -1,1 +1,5 @@
+export * from './Bag'
+export * from './Heart'
+export * from './Logo'
 export * from './Search'
+export * from './User'
