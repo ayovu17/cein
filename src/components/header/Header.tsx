@@ -8,7 +8,7 @@ export function Header() {
         px-4
         h-[50px]
         bg-neutral-50
-        md:h-17
+        lg:h-17
       "
     >
       <Menu />
