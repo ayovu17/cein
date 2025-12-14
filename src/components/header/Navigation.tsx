@@ -1,13 +1,13 @@
-import { Button, LogoIcon, Typography } from '@/components'
+import { Button, LogoIcon } from '@/components'
 
 export function Navigation() {
   return (
     <nav className="flex gap-10.5">
-      <Button icon={LogoIcon} to="/" />
-      <Button variant="text" to="/"><Typography variant="text-300" tag="span">Shop</Typography></Button>
-      <Button variant="text" to="/"><Typography variant="text-300" tag="span">New Arrivals</Typography></Button>
-      <Button variant="text" to="/"><Typography variant="text-300" tag="span">Sales</Typography></Button>
-      <Button variant="text" to="/"><Typography variant="text-300" tag="span">Journal</Typography></Button>
+      <Button variant="icon" icon={LogoIcon} to="/" />
+      <Button variant="text" size="sm" to="/">Shop</Button>
+      <Button variant="text" size="sm" to="/">New Arrivals</Button>
+      <Button variant="text" size="sm" to="/">Sales</Button>
+      <Button variant="text" size="sm" to="/">Journal</Button>
     </nav>
   )
 }
