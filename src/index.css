@@ -31,8 +31,27 @@
   --text900: 24px;
   --leading900: 32px;
 
+  /* CONTAINER */
+  --container-max-width: 1400px;
+  --container-padding-mobile: 16px;
+  --container-padding-desktop: 32px;
+
   /* DURATION */
   --duration-button: 300ms;
+}
+
+@utility container {
+  max-width: theme(--container-max-width);
+  margin: 0 auto;
+  padding-left: theme(--container-padding-mobile);
+  padding-right: theme(--container-padding-mobile);
+}
+
+@media (min-width: theme(--breakpoint-lg)) {
+  .container {
+    padding-left: theme(--container-padding-desktop);
+    padding-right: theme(--container-padding-desktop);
+  }
 }
 
 html {

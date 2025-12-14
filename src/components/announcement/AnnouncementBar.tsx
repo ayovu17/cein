@@ -15,10 +15,10 @@ export function AnnouncementBar() {
         bg-neutral-900
       "
     >
-      <Typography variant="text-100" tag="p" className="md:hidden">
+      <Typography variant="text-100" color="white" tag="p" className="lg:hidden">
         {mockData.mobile}
       </Typography>
-      <Typography variant="text-100" tag="p" className="hidden md:block">
+      <Typography variant="text-100" color="white" tag="p" className="hidden lg:block">
         {mockData.desktop}
       </Typography>
     </div>

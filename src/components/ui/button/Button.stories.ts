@@ -30,15 +30,36 @@ export const ContainWhite: Story = {
   },
 }
 
-export const Text: Story = {
+export const TextMDBlack: Story = {
   args: {
     variant: 'text',
+    size: 'md',
+    color: 'black',
+    children: 'Button',
+  },
+}
+
+export const TextSMBlack: Story = {
+  args: {
+    variant: 'text',
+    size: 'sm',
+    color: 'black',
+    children: 'Button',
+  },
+}
+
+export const TextXSGray: Story = {
+  args: {
+    variant: 'text',
+    size: 'xs',
+    color: 'gray',
     children: 'Button',
   },
 }
 
 export const Icon: Story = {
   args: {
+    variant: 'icon',
     icon: SearchIcon,
   },
 }
