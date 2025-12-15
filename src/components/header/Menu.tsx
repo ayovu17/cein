@@ -14,7 +14,7 @@ export function Menu() {
         "
       >
         <li className="justify-self-start"><BurgerMenu /></li>
-        <li className="justify-self-center"><Button icon={LogoIcon} to="/" /></li>
+        <li className="justify-self-center"><Button variant="icon" icon={LogoIcon} to="/" /></li>
         <li className="justify-self-end"><Actions /></li>
       </ul>
       <div
