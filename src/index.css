@@ -36,8 +36,13 @@
   --container-padding-mobile: 16px;
   --container-padding-desktop: 32px;
 
+  /* Z INDEX */
+  --z-base: 0;
+  --z-content: 10;
+
   /* DURATION */
   --duration-button: 300ms;
+  --duration-card: 500ms;
 }
 
 @utility container {
