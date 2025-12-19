@@ -1,2 +1,2 @@
 export * from './lazy'
-export * from './Main'
+export * from './main/Main'
