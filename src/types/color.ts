@@ -1,0 +1,11 @@
+export type Color
+  = 'black'
+    | 'camel'
+    | 'dusty-blue'
+    | 'brown'
+    | 'olive'
+    | 'taupe'
+    | 'terracotta'
+    | 'red'
+    | 'beige'
+    | 'graphite'

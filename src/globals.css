@@ -13,6 +13,17 @@
   /* FONTS */
   --font-styrene-a: StyreneA, sans-serif;
 
+  /* COLORS */
+  --color-camel: #C6AE9B;
+  --color-dusty-blue: #93adbd;
+  --color-brown: #895E47;
+  --color-olive: #5B8147;
+  --color-taupe: #A1877B;
+  --color-terracotta: #DA693B;
+  --color-red: #C43F40;
+  --color-beige: #F2E2D5;
+  --color-graphite: #8b8b8b;
+
   /* FONT SIZES */
   --text100: 11px;
   --leading100: 20px;
@@ -46,6 +57,54 @@
   --duration-card: 500ms;
 }
 
+@layer base {
+  html {
+    @apply font-styrene-a;
+  }
+}
+
+@layer components {
+  [data-bg-color="black"] {
+    --bg: #000;
+  }
+
+  [data-bg-color="camel"] {
+    --bg: theme(--color-camel);
+  }
+
+  [data-bg-color="dusty-blue"] {
+    --bg: theme(--color-dusty-blue);
+  }
+
+  [data-bg-color="brown"] {
+    --bg: theme(--color-brown);
+  }
+
+  [data-bg-color="olive"] {
+    --bg: theme(--color-olive);
+  }
+
+  [data-bg-color="taupe"] {
+    --bg: theme(--color-taupe);
+  }
+
+  [data-bg-color="terracotta"] {
+    --bg: theme(--color-terracotta);
+  }
+
+  [data-bg-color="red"] {
+    --bg: theme(--color-red);
+  }
+
+  [data-bg-color="beige"] {
+    --bg: theme(--color-beige);
+  }
+
+  [data-bg-color="graphite"] {
+    --bg: theme(--color-graphite);
+  }
+}
+
 @utility container {
   max-width: theme(--container-max-width);
   margin: 0 auto;
@@ -58,8 +117,4 @@
     padding-left: theme(--container-padding-desktop);
     padding-right: theme(--container-padding-desktop);
   }
-}
-
-html {
-  @apply font-styrene-a ;
 }
