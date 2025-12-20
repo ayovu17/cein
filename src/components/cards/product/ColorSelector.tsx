@@ -29,14 +29,8 @@ export function ColorSelector({
   )
 
   return (
-    <div
-      className={cn}
-    >
-      <Typography
-        variant="text-300"
-        tag="span"
-        className="pointer-events-none"
-      >
+    <div className={cn}>
+      <Typography variant="text-300" tag="span" className="pointer-events-none">
         {formatColorName(selectedColor)}
       </Typography>
       <ul className="flex gap-1">
@@ -47,8 +41,7 @@ export function ColorSelector({
             pickedColor={selectedColor}
             pickColor={selectColor}
           />
-        ),
-        )}
+        ))}
       </ul>
     </div>
   )
