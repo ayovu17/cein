@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import {
   LazyCategorySection,
   LazyGoodsSection,
+  LazyLookbookSection,
   MainSection,
 } from '@/components'
 
@@ -11,6 +12,7 @@ export function HomePage() {
       <MainSection />
       <Suspense fallback={null}><LazyCategorySection /></Suspense>
       <Suspense fallback={null}><LazyGoodsSection /></Suspense>
+      <Suspense fallback={null}><LazyLookbookSection /></Suspense>
     </>
   )
 }
