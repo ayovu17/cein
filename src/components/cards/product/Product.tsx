@@ -43,11 +43,7 @@ export function ProductCard({
         onMouseEnter={showColorSelector}
         onMouseLeave={hideColorSelector}
       >
-        <img
-          src={imgPath}
-          alt={title}
-          className="aspect-195/218 object-cover"
-        />
+        <img src={imgPath} alt={title} className="aspect-195/218 object-cover" />
         <Button
           variant="icon"
           icon={() => HeartIcon({ isFill: isFavorite })}
@@ -74,17 +70,8 @@ export function ProductCard({
         />
       </div>
       <div>
-        <Typography
-          variant="text-300"
-          tag="p"
-          className="truncate"
-        >
-          {title}
-        </Typography>
-        <Typography variant="text-300" tag="span">
-          $
-          {price}
-        </Typography>
+        <Typography variant="text-300" tag="p" className="truncate">{title}</Typography>
+        <Typography variant="text-300" tag="span">{`$${price}`}</Typography>
       </div>
     </div>
   )

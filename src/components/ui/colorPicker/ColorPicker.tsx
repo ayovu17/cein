@@ -26,9 +26,9 @@ export function ColorPicker({
     >
       <span
         className="
-        inline-block
-        w-4 h-4
-        bg-(--bg) rounded-full
+          inline-block
+          w-4 h-4
+          bg-(--bg) rounded-full
         "
         data-bg-color={value}
       />

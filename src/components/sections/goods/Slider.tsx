@@ -8,11 +8,7 @@ interface GoodsSliderProps {
 
 export function GoodsSlider({ goods }: GoodsSliderProps) {
   return (
-    <Swiper
-      spaceBetween={20}
-      slidesPerView="auto"
-      className="mt-12 overflow-visible!"
-    >
+    <Swiper spaceBetween={20} slidesPerView="auto" className="mt-12 overflow-visible!">
       {goods.map(p => (
         <SwiperSlide
           key={p.title}
@@ -30,8 +26,7 @@ export function GoodsSlider({ goods }: GoodsSliderProps) {
             imgPath={p.imgPath}
           />
         </SwiperSlide>
-      ),
-      )}
+      ))}
     </Swiper>
   )
 }

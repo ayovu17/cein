@@ -1,4 +1,11 @@
-import { BagIcon, Button, HeartIcon, SearchIcon, Typography, UserIcon } from '@/components'
+import {
+  BagIcon,
+  Button,
+  HeartIcon,
+  SearchIcon,
+  Typography,
+  UserIcon,
+} from '@/components'
 import { useFavoritesStore } from '@/stores'
 import { useCartStore } from '@/stores/cart'
 

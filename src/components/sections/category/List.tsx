@@ -13,21 +13,14 @@ export function CategoryList({ categories }: CategoryListProps) {
   return (
     <ul
       className="
-          flex flex-col gap-5
-          mt-12
-          md:flex-row
-        "
+        flex flex-col gap-5
+        mt-12
+        md:flex-row
+      "
     >
       {categories.map(c => (
-        <li
-          key={c.name}
-          className="w-full aspect-square md:aspect-432/532"
-        >
-          <LinkCard
-            name={c.name}
-            imgPath={c.imgPath}
-            to={c.to}
-          />
+        <li key={c.name} className="w-full aspect-square md:aspect-432/532">
+          <LinkCard name={c.name} imgPath={c.imgPath} to={c.to} />
         </li>
       ))}
     </ul>
