@@ -9,7 +9,7 @@ function PhilosophySection() {
       "
     >
       <div className="container flex flex-col gap-12">
-        <Typography variant="text-900" tag="h2" className="text-center">
+        <Typography variant="text-900" tag="h1" className="text-center">
           The Art of Fewer, Better Choices
         </Typography>
         <Typography variant="text-500" tag="p" className="text-center">

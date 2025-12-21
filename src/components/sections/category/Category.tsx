@@ -22,7 +22,7 @@ const mockData = [
 function CategorySection() {
   return (
     <section className="container py-8">
-      <Typography variant="text-600" tag="h2" className="p-4">
+      <Typography variant="text-600" tag="h1" className="p-4">
         Elevate your lifestyle with a more intelligent, superior wardrobe.
         <br />
         Our range is crafted sustainably with longevity in mind.

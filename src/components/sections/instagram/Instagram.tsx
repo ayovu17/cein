@@ -28,7 +28,7 @@ function InstagramSection() {
   return (
     <section className="overflow-hidden">
       <div className="container py-8">
-        <Typography variant="text-600" tag="h2" className="p-4 text-center">Shop Instagram</Typography>
+        <Typography variant="text-600" tag="h1" className="p-4 text-center">Shop Instagram</Typography>
         <InstagramSlider photos={mockData} />
       </div>
     </section>
