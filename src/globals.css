@@ -55,12 +55,17 @@
 
   /* DURATION */
   --duration-button: 300ms;
+  --duration-input: 300ms;
   --duration-card: 500ms;
 }
 
 @layer base {
   html {
     @apply font-styrene-a;
+  }
+
+  input {
+    @apply focus:outline-none;
   }
 }
 
