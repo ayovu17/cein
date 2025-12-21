@@ -5,7 +5,7 @@ function PhilosophySection() {
     <section
       className="
         pt-24 pb-45
-        bg-white-smoke
+        bg-white-smoke-100
       "
     >
       <div className="container flex flex-col gap-12">

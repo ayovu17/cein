@@ -1,5 +1,6 @@
 export * from './announcement/AnnouncementBar'
 export * from './cards'
+export * from './footer'
 export * from './header'
 export * from './sections'
 export * from './ui'
