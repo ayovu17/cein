@@ -23,7 +23,7 @@ export function ColorSelector({
     w-full h-21.5
     bg-white/80
     opacity-0
-    transition-all duration-(--duration-card)
+    transition-opacity duration-(--duration-card)
     lg:flex`,
     isVisible && 'opacity-100',
   )

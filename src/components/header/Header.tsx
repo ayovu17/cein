@@ -2,7 +2,7 @@ import { Menu } from './Menu'
 
 export function Header() {
   return (
-    <div
+    <header
       className="
         container
         flex items-center
@@ -12,6 +12,6 @@ export function Header() {
       "
     >
       <Menu />
-    </div>
+    </header>
   )
 }

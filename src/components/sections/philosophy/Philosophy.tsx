@@ -5,11 +5,11 @@ function PhilosophySection() {
     <section
       className="
         pt-24 pb-45
-        bg-white-smoke
+        bg-white-smoke-100
       "
     >
       <div className="container flex flex-col gap-12">
-        <Typography variant="text-900" tag="h2" className="text-center">
+        <Typography variant="text-900" tag="h1" className="text-center">
           The Art of Fewer, Better Choices
         </Typography>
         <Typography variant="text-500" tag="p" className="text-center">

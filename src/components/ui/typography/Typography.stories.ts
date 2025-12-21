@@ -60,3 +60,12 @@ export const Typography100: Story = {
     children: 'Typography',
   },
 }
+
+export const Typography100CapGray: Story = {
+  args: {
+    variant: 'text-100cap',
+    color: 'gray',
+    tag: 'span',
+    children: 'Typography',
+  },
+}

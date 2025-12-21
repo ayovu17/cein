@@ -14,7 +14,8 @@
   --font-styrene-a: StyreneA, sans-serif;
 
   /* COLORS */
-  --color-white-smoke: #F5F4F4;
+  --color-white-smoke-100: #F5F4F4;
+  --color-white-smoke-200: #DDD;
   --color-camel: #C6AE9B;
   --color-dusty-blue: #93adbd;
   --color-brown: #895E47;
@@ -26,6 +27,9 @@
   --color-graphite: #8b8b8b;
 
   /* FONT SIZES */
+  --text100cap: 11px;
+  --leading100cap: 17px;
+
   --text100: 11px;
   --leading100: 20px;
 
@@ -55,12 +59,17 @@
 
   /* DURATION */
   --duration-button: 300ms;
+  --duration-input: 300ms;
   --duration-card: 500ms;
 }
 
 @layer base {
   html {
     @apply font-styrene-a;
+  }
+
+  input {
+    @apply focus:outline-none;
   }
 }
 

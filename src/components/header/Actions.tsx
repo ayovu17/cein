@@ -14,7 +14,7 @@ export function Actions() {
   const cartProductsCount = useCartStore(state => state.cartProductsCount())
 
   return (
-    <div className="flex gap-2.5 lg:gap-4.5">
+    <div className="flex items-center gap-2.5 lg:gap-4.5">
       <Button variant="icon" icon={SearchIcon} />
       <Button variant="text" size="sm" to="/" className="hidden lg:flex">Stores</Button>
       <Button variant="icon" icon={UserIcon} className="hidden lg:flex" />
