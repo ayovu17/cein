@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import {
   LazyCategorySection,
   LazyGoodsSection,
+  LazyInstagramSection,
   LazyLookbookSection,
   LazyPhilosophySection,
   MainSection,
@@ -15,6 +16,7 @@ export function HomePage() {
       <Suspense fallback={null}><LazyGoodsSection /></Suspense>
       <Suspense fallback={null}><LazyLookbookSection /></Suspense>
       <Suspense fallback={null}><LazyPhilosophySection /></Suspense>
+      <Suspense fallback={null}><LazyInstagramSection /></Suspense>
     </>
   )
 }
