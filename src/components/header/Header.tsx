@@ -4,7 +4,6 @@ export function Header() {
   return (
     <header
       className="
-        container
         flex items-center
         h-[50px]
         bg-neutral-50

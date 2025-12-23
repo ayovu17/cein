@@ -8,6 +8,7 @@ export function Menu() {
     <>
       <ul
         className="
+          container
           grid grid-cols-3 items-center
           w-full
           lg:hidden
@@ -19,6 +20,7 @@ export function Menu() {
       </ul>
       <div
         className="
+          container
           hidden justify-between
           w-full
           lg:flex
