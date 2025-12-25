@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 import clsx from 'clsx'
 
 type ButtonVariant = 'contain' | 'text' | 'icon'
-type ButtonWidth = 'default' | 'full'
+type ButtonWidth = 'default' | 'full' | 'fit'
 type ButtonSize = 'xs' | 'sm' | 'md'
 type ButtonColor = 'white' | 'black' | 'gray'
 
@@ -39,6 +39,7 @@ export function Button({
   const widthClass = clsx(
     width === 'default' && 'w-29',
     width === 'full' && 'w-full',
+    width === 'fit' && 'w-fit px-4',
   )
   const sizeClass = clsx(
     size === 'xs' && 'text-(length:--text100) leading-(--leading100)',
