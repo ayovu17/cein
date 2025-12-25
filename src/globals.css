@@ -56,6 +56,8 @@
   /* Z INDEX */
   --z-base: 0;
   --z-content: 10;
+  --z-overlay: 500;
+  --z-modal: 600;
 
   /* DURATION */
   --duration-button: 300ms;
