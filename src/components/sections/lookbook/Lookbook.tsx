@@ -13,9 +13,13 @@ const mockData = [
   },
 ]
 
-function LookbookSection() {
+interface LookbookSectionProps {
+  ref: (lookbookRef: HTMLElement | null) => void
+}
+
+function LookbookSection({ ref }: LookbookSectionProps) {
   return (
-    <section className="container py-8">
+    <section ref={ref} className="container py-8">
       <ul
         className="
           flex flex-col gap-5
