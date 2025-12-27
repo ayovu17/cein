@@ -62,6 +62,7 @@
   /* DURATION */
   --duration-button: 300ms;
   --duration-input: 300ms;
+  --duration-modal: 300ms;
   --duration-card: 500ms;
 }
 
