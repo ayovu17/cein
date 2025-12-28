@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { useModalsStore } from '@/stores'
 import { LazyPromotionModal } from './lazy'
 
@@ -16,7 +16,7 @@ export function Modals() {
 
   return (
     <>
-      {modals.has('promotion') && <LazyPromotionModal />}
+      {modals.has('promotion') && <Suspense fallback={null}><LazyPromotionModal /></Suspense>}
     </>
   )
 }

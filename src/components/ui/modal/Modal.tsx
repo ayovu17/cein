@@ -13,6 +13,11 @@ export function Modal({ modalClose, children }: ModalProps) {
   const [isVisible, setIsVisible] = useState(false)
   const { closeModal } = useModalsStore()
 
+  function handleClose() {
+    setIsVisible(false)
+    setTimeout(() => closeModal(modalClose), 300)
+  }
+
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -29,7 +34,7 @@ export function Modal({ modalClose, children }: ModalProps) {
         md:items-center`,
         isVisible && 'opacity-100',
       )}
-      onClick={() => closeModal(modalClose)}
+      onClick={handleClose}
     >
       <div
         className={clsx(
@@ -38,10 +43,11 @@ export function Modal({ modalClose, children }: ModalProps) {
           flex flex-col
           w-full h-[90dvh]
           bg-white
-          opacity-0 scale-90
           transition-all duration-(--duration-modal)
           md:mx-4 md:w-auto md:h-auto md:max-h-[80dvh]`,
-          isVisible && 'opacity-100 scale-100',
+          isVisible
+            ? 'translate-y-0 md:opacity-100 md:scale-100'
+            : 'translate-y-full md:translate-y-0 md:opacity-0 md:scale-90',
         )}
         onClick={e => e.stopPropagation()}
       >
@@ -49,7 +55,7 @@ export function Modal({ modalClose, children }: ModalProps) {
           variant="icon"
           icon={XIcon}
           className="absolute top-2 right-2"
-          onClick={() => closeModal(modalClose)}
+          onClick={handleClose}
         />
         <div className="overflow-y-auto">
           {children}
