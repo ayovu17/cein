@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
-import { useModalsStore } from '@/stores'
+import { useOverlaysStore } from '@/stores'
 
 export function usePromotionTrigger(targetRef: HTMLElement | null) {
-  const { openModal } = useModalsStore()
+  const { openOverlay } = useOverlaysStore()
 
   useEffect(() => {
     if (!targetRef) {
@@ -15,7 +15,7 @@ export function usePromotionTrigger(targetRef: HTMLElement | null) {
       if (!entry.isIntersecting)
         return
 
-      openModal('promotion')
+      openOverlay('promotion')
       localStorage.setItem('promo_first_order', 'true')
       observer.disconnect()
     }, {
@@ -26,5 +26,5 @@ export function usePromotionTrigger(targetRef: HTMLElement | null) {
     return () => {
       observer.disconnect()
     }
-  }, [targetRef, openModal])
+  }, [targetRef, openOverlay])
 }
