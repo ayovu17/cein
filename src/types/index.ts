@@ -1,4 +1,5 @@
 export * from './color'
+export * from './link'
 export * from './modal'
 export * from './product'
 export * from './size'
