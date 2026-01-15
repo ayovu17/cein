@@ -1,5 +1,5 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
-import { AnnouncementBar, Footer, Header, Modals } from '@/components'
+import { AnnouncementBar, Footer, Header, OverlaysRoot } from '@/components'
 
 export const Route = createRootRoute({
   component: RootLayout,
@@ -16,7 +16,7 @@ function RootLayout() {
         </main>
         <Footer />
       </div>
-      <Modals />
+      <OverlaysRoot />
     </>
   )
 }
