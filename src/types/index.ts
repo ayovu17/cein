@@ -1,4 +1,5 @@
 export * from './color'
-export * from './modal'
+export * from './link'
+export * from './overlay'
 export * from './product'
 export * from './size'

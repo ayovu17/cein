@@ -1,21 +1,21 @@
-import type { Modal as ModalType } from '@/types'
+import type { Overlay } from '@/types'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { Button, XIcon } from '@/components'
-import { useModalsStore } from '@/stores'
+import { useOverlaysStore } from '@/stores'
 
 interface ModalProps {
-  modalClose: ModalType
+  modalClose: Overlay
   children: React.ReactNode
 }
 
 export function Modal({ modalClose, children }: ModalProps) {
   const [isVisible, setIsVisible] = useState(false)
-  const { closeModal } = useModalsStore()
+  const { closeOverlay } = useOverlaysStore()
 
   function handleClose() {
     setIsVisible(false)
-    setTimeout(() => closeModal(modalClose), 300)
+    setTimeout(() => closeOverlay(modalClose), 300)
   }
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export function Modal({ modalClose, children }: ModalProps) {
         flex justify-center items-end
         bg-black/50 backdrop-blur-sm
         opacity-0
-        transition-opacity duration-(--duration-modal)
+        transition-opacity duration-(--duration-overlay)
         md:items-center`,
         isVisible && 'opacity-100',
       )}
@@ -43,7 +43,7 @@ export function Modal({ modalClose, children }: ModalProps) {
           flex flex-col
           w-full h-[90dvh]
           bg-white
-          transition-all duration-(--duration-modal)
+          transition-all duration-(--duration-overlay)
           md:mx-4 md:w-auto md:h-auto md:max-h-[80dvh]`,
           isVisible
             ? 'translate-y-0 md:opacity-100 md:scale-100'

@@ -1,4 +1,6 @@
-export const FOOTER_NAVIGATION = {
+import type { Link } from '@/types'
+
+export const FOOTER_NAVIGATION: Record<string, Link[]> = {
   'CONTACT US': [
     {
       label: '+1 (844) 326-6000',
