@@ -1,4 +1,4 @@
 export * from './cart'
 export * from './favorites'
-export * from './modals'
+export * from './overlays'
 export * from './products'
