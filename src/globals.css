@@ -62,13 +62,18 @@
   /* DURATION */
   --duration-button: 300ms;
   --duration-input: 300ms;
-  --duration-modal: 300ms;
+  --duration-collapse: 300ms;
+  --duration-overlay: 300ms;
   --duration-card: 500ms;
 }
 
 @layer base {
   html {
     @apply font-styrene-a;
+  }
+
+  body {
+    @apply scrollbar-hidden;
   }
 
   input {
@@ -115,6 +120,12 @@
 
   [data-bg-color="graphite"] {
     --bg: theme(--color-graphite);
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 

@@ -11,11 +11,16 @@ import { useCartStore, useFavoritesStore, useOverlaysStore } from '@/stores'
 export function Actions() {
   const favoritesCount = useFavoritesStore(state => state.favoritesCount())
   const cartProductsCount = useCartStore(state => state.cartProductsCount())
-  const { openOverlay } = useOverlaysStore()
+  const { openOverlay, closeOverlayWithDelay } = useOverlaysStore()
 
   return (
     <div className="flex items-center gap-2.5 lg:gap-4.5">
-      <Button variant="icon" icon={SearchIcon} onClick={() => openOverlay('search')} />
+      <Button
+        variant="icon"
+        icon={SearchIcon}
+        onMouseEnter={() => openOverlay('search')}
+        onMouseLeave={() => closeOverlayWithDelay('search')}
+      />
       <Button variant="text" size="sm" to="/" className="hidden lg:flex">Stores</Button>
       <Button variant="icon" icon={UserIcon} className="hidden lg:flex" />
       <div className="flex items-center">
