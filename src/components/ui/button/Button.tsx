@@ -6,7 +6,7 @@ type ButtonWidth = 'default' | 'full' | 'fit'
 type ButtonSize = 'xs' | 'sm' | 'md'
 type ButtonColor = 'white' | 'black' | 'gray'
 
-interface ButtonProps extends React.ComponentProps<'button'> {
+interface BaseButtonProps {
   variant: ButtonVariant
   width?: ButtonWidth
   size?: ButtonSize
@@ -15,19 +15,25 @@ interface ButtonProps extends React.ComponentProps<'button'> {
   children?: React.ReactNode
   to?: string
 }
+type AsButton = BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
+type AsLink = BaseButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  to: string
+}
+type ButtonProps = AsButton | AsLink
 
-export function Button({
-  type = 'button',
-  variant,
-  width = 'default',
-  size = 'md',
-  color = 'black',
-  icon: Icon,
-  className,
-  children,
-  to,
-  ...props
-}: ButtonProps) {
+function isLink(props: ButtonProps): props is AsLink {
+  return 'to' in props
+}
+
+export function Button(props: ButtonProps) {
+  const {
+    variant,
+    width = 'default',
+    size = 'md',
+    color = 'black',
+    className,
+  } = props
+
   const variantClass = clsx(
     (variant === 'contain' || variant === 'icon') && 'flex justify-center items-center',
     variant === 'contain' && color === 'white' && 'bg-neutral-100 text-neutral-700 hover:bg-white',
@@ -56,23 +62,28 @@ export function Button({
     className,
   )
 
-  if (to) {
+  if (isLink(props)) {
+    const { variant, width, size, color, icon: Icon, className, children, to, ...rest } = props
+
     return (
-      <Link to={to} className={cn}>
+      <Link to={to} className={cn} {...rest}>
         {Icon && <Icon />}
         {children}
       </Link>
     )
   }
+  else {
+    const { type = 'button', variant, width, size, color, icon: Icon, className, children, ...rest } = props
 
-  return (
-    <button
-      type={type}
-      className={cn}
-      {...props}
-    >
-      {Icon && <Icon />}
-      {children}
-    </button>
-  )
+    return (
+      <button
+        type={type}
+        className={cn}
+        {...rest}
+      >
+        {Icon && <Icon />}
+        {children}
+      </button>
+    )
+  }
 }
