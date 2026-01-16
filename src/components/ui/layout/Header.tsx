@@ -34,7 +34,9 @@ export function HeaderLayout({ component, children, ...props }: HeaderLayoutProp
 
   return (
     <div className={cn} {...props}>
-      {children}
+      <div className="container">
+        {children}
+      </div>
     </div>
   )
 }

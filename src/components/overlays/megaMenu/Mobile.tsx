@@ -6,7 +6,6 @@ export function MobileMenu() {
   return (
     <div
       className="
-        container
         flex flex-col justify-between
         py-4
         h-full
