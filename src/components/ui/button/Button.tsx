@@ -13,7 +13,6 @@ interface BaseButtonProps {
   color?: ButtonColor
   icon?: React.ComponentType
   children?: React.ReactNode
-  to?: string
 }
 type AsButton = BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 type AsLink = BaseButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
