@@ -20,7 +20,7 @@ export function CategoryList({ categories }: CategoryListProps) {
     >
       {categories.map(c => (
         <li key={c.name} className="w-full aspect-square md:aspect-432/532">
-          <LinkCard name={c.name} imgPath={c.imgPath} to={c.to} />
+          <LinkCard {...c} />
         </li>
       ))}
     </ul>

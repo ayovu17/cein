@@ -28,7 +28,7 @@ function LookbookSection({ ref }: LookbookSectionProps) {
       >
         {mockData.map(i => (
           <li key={i.name} className="w-full aspect-square md:aspect-658/719">
-            <LinkCard name={i.name} imgPath={i.imgPath} to={i.to} />
+            <LinkCard {...i} />
           </li>
         ))}
       </ul>
