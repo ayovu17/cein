@@ -9,7 +9,7 @@ export function MegaMenuLayout() {
   return (
 
     <HeaderLayout
-      component="mega-menu"
+      layout="mega-menu"
       onMouseEnter={() => openOverlay('mega-menu')}
       onMouseLeave={() => closeOverlay('mega-menu')}
     >

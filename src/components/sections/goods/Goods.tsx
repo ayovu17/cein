@@ -3,7 +3,8 @@ import { useProductsStore } from '@/stores'
 import { GoodsSlider } from './Slider'
 
 function GoodsSection() {
-  const goods = useProductsStore(state => state.wtwProducts)
+  const { getWtwProducts } = useProductsStore()
+  const goods = getWtwProducts()
 
   return (
     <section className="overflow-hidden">

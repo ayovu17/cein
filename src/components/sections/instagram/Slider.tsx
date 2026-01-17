@@ -21,7 +21,7 @@ export function InstagramSlider({ photos }: InstagramSliderProps) {
             sm:w-[250px]! sm:h-[250px]!
           "
         >
-          <InstagramCard imgPath={p.imgPath} href={p.href} />
+          <InstagramCard {...p} />
         </SwiperSlide>
       ))}
     </Swiper>

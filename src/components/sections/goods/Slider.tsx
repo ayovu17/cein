@@ -17,14 +17,7 @@ export function GoodsSlider({ goods }: GoodsSliderProps) {
             md:w-[251px]! md:h-[348px]!
           "
         >
-          <ProductCard
-            id={p.id}
-            title={p.title}
-            colors={p.colors}
-            currentColor={p.currentColor}
-            price={p.price}
-            imgPath={p.imgPath}
-          />
+          <ProductCard {...p} />
         </SwiperSlide>
       ))}
     </Swiper>

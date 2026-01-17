@@ -4,7 +4,6 @@ export function DesktopMenu() {
   return (
     <div
       className="
-        container
         hidden justify-between
         py-8
         lg:flex

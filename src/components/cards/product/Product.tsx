@@ -43,7 +43,7 @@ export function ProductCard({
         onMouseEnter={showColorSelector}
         onMouseLeave={hideColorSelector}
       >
-        <img src={imgPath} alt={title} className="aspect-195/218 object-cover" />
+        <img src={imgPath} alt={title} className="w-full aspect-195/218 object-cover" />
         <Button
           variant="icon"
           icon={() => HeartIcon({ isFill: isFavorite })}

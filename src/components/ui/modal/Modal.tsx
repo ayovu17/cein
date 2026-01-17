@@ -11,7 +11,7 @@ interface ModalProps {
 
 export function Modal({ modalClose, children }: ModalProps) {
   const [isVisible, setIsVisible] = useState(false)
-  const { closeOverlay } = useOverlaysStore()
+  const { closingOverlay, closeOverlay } = useOverlaysStore()
 
   function handleClose() {
     setIsVisible(false)
@@ -21,6 +21,11 @@ export function Modal({ modalClose, children }: ModalProps) {
   useEffect(() => {
     setIsVisible(true)
   }, [])
+
+  useEffect(() => {
+    if (closingOverlay === modalClose)
+      setIsVisible(false)
+  }, [closingOverlay, modalClose])
 
   return (
     <div

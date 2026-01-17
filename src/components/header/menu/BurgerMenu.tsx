@@ -1,10 +1,10 @@
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useOverlaysStore } from '@/stores'
 
 export function BurgerMenu() {
   const [isPressed, setIsPressed] = useState(false)
-  const { openOverlay, closeOverlay } = useOverlaysStore()
+  const { overlays, openOverlay, closeOverlay } = useOverlaysStore()
 
   function toggleMenu() {
     setIsPressed(!isPressed)
@@ -28,6 +28,11 @@ export function BurgerMenu() {
     lineClass,
     isPressed && '-rotate-45 -translate-y-[5px]',
   )
+
+  useEffect(() => {
+    if (!overlays.has('mega-menu'))
+      setIsPressed(false)
+  }, [overlays])
 
   return (
     <button
