@@ -1,5 +1,15 @@
-import type { Color } from './color'
-import type { Size } from './size'
+export type Color
+  = 'black'
+    | 'camel'
+    | 'dusty-blue'
+    | 'brown'
+    | 'olive'
+    | 'taupe'
+    | 'terracotta'
+    | 'red'
+    | 'beige'
+    | 'graphite'
+export type Size = 'xs' | 's' | 'm' | 'l' | 'xl'
 
 export interface Product {
   id: number
