@@ -11,11 +11,10 @@ export function BurgerMenu() {
     isPressed ? closeOverlay('mega-menu') : openOverlay('mega-menu')
   }
 
-  const lineClass = clsx(
-    `w-4 h-[1.5px]
-    bg-neutral-900 rounded
-    transition-all duration-300`,
-  )
+  const lineClass
+    = `w-4 h-[1.5px]
+      bg-neutral-900 rounded
+      transition-all duration-300`
   const firstLineCn = clsx(
     lineClass,
     isPressed && 'rotate-45 translate-y-[5.5px]',

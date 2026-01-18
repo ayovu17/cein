@@ -12,18 +12,16 @@ export function ColorPicker({
   pickedColor,
   pickColor,
 }: ColorPickerProps) {
+  const cn = clsx(
+    `flex justify-center items-center
+    w-5 h-5
+    rounded-full
+    cursor-pointer`,
+    value === pickedColor && 'border',
+  )
+
   return (
-    <button
-      type="button"
-      className={clsx(
-        `flex justify-center items-center
-        w-5 h-5
-        rounded-full
-        cursor-pointer`,
-        value === pickedColor && 'border',
-      )}
-      onClick={() => pickColor(value)}
-    >
+    <button type="button" className={cn} onClick={() => pickColor(value)}>
       <span
         className="
           inline-block

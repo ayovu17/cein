@@ -2,12 +2,7 @@ import { Typography } from '@/components'
 
 function PhilosophySection() {
   return (
-    <section
-      className="
-        pt-24 pb-45
-        bg-white-smoke-100
-      "
-    >
+    <section className="pt-24 pb-45 bg-white-smoke-100">
       <div className="container flex flex-col gap-12">
         <Typography variant="text-900" tag="h1" className="text-center">
           The Art of Fewer, Better Choices

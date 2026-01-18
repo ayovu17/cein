@@ -18,6 +18,29 @@ export function Modal({ modalClose, children }: ModalProps) {
     setTimeout(() => closeOverlay(modalClose), 300)
   }
 
+  const overlayClass = clsx(
+    `z-(--z-overlay)
+    fixed inset-0
+    flex justify-center items-end
+    bg-black/50 backdrop-blur-sm
+    opacity-0
+    transition-opacity duration-(--duration-overlay)
+    md:items-center`,
+    isVisible && 'opacity-100',
+  )
+  const modalClass = clsx(
+    `z-(--z-modal)
+    relative
+    flex flex-col
+    w-full h-[90dvh]
+    bg-white
+    transition-all duration-(--duration-overlay)
+    md:mx-4 md:w-auto md:h-auto md:max-h-[80dvh]`,
+    isVisible
+      ? 'translate-y-0 md:opacity-100 md:scale-100'
+      : 'translate-y-full md:translate-y-0 md:opacity-0 md:scale-90',
+  )
+
   useEffect(() => {
     setIsVisible(true)
   }, [])
@@ -28,34 +51,8 @@ export function Modal({ modalClose, children }: ModalProps) {
   }, [closingOverlay, modalClose])
 
   return (
-    <div
-      className={clsx(
-        `z-(--z-overlay)
-        fixed inset-0
-        flex justify-center items-end
-        bg-black/50 backdrop-blur-sm
-        opacity-0
-        transition-opacity duration-(--duration-overlay)
-        md:items-center`,
-        isVisible && 'opacity-100',
-      )}
-      onClick={handleClose}
-    >
-      <div
-        className={clsx(
-          `z-(--z-modal)
-          relative
-          flex flex-col
-          w-full h-[90dvh]
-          bg-white
-          transition-all duration-(--duration-overlay)
-          md:mx-4 md:w-auto md:h-auto md:max-h-[80dvh]`,
-          isVisible
-            ? 'translate-y-0 md:opacity-100 md:scale-100'
-            : 'translate-y-full md:translate-y-0 md:opacity-0 md:scale-90',
-        )}
-        onClick={e => e.stopPropagation()}
-      >
+    <div className={overlayClass} onClick={handleClose}>
+      <div className={modalClass} onClick={e => e.stopPropagation()}>
         <Button
           variant="icon"
           icon={XIcon}

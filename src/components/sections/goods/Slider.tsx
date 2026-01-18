@@ -10,13 +10,7 @@ export function GoodsSlider({ goods }: GoodsSliderProps) {
   return (
     <Swiper spaceBetween={20} slidesPerView="auto" className="mt-12 overflow-visible!">
       {goods.map(p => (
-        <SwiperSlide
-          key={p.title}
-          className="
-            w-[195px]! h-[287px]!
-            md:w-[251px]! md:h-[348px]!
-          "
-        >
+        <SwiperSlide key={p.title} className="w-[195px]! h-[287px]! md:w-[251px]! md:h-[348px]!">
           <ProductCard {...p} />
         </SwiperSlide>
       ))}

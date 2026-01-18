@@ -20,12 +20,7 @@ interface LookbookSectionProps {
 function LookbookSection({ ref }: LookbookSectionProps) {
   return (
     <section ref={ref} className="container py-8">
-      <ul
-        className="
-          flex flex-col gap-5
-          md:flex-row
-        "
-      >
+      <ul className="flex flex-col gap-5 md:flex-row">
         {mockData.map(i => (
           <li key={i.name} className="w-full aspect-square md:aspect-658/719">
             <LinkCard {...i} />

@@ -32,12 +32,7 @@ export function ProductCard({
   const addProductToCart = useCartStore(state => state.addProductToCart)
 
   return (
-    <div
-      className="
-        flex flex-col justify-between
-        w-full h-full
-      "
-    >
+    <div className="flex flex-col justify-between w-full h-full">
       <div
         className="relative"
         onMouseEnter={showColorSelector}
@@ -47,19 +42,13 @@ export function ProductCard({
         <Button
           variant="icon"
           icon={() => HeartIcon({ isFill: isFavorite })}
-          className="
-            z-(--z-content)
-            absolute top-[15px] right-[15px]
-          "
+          className="z-(--z-content) absolute top-[15px] right-[15px]"
           onClick={() => toggleFavorite(id)}
         />
         <Button
           variant="icon"
           icon={PlusIcon}
-          className="
-            z-(--z-content)
-            absolute bottom-[15px] right-[15px]
-          "
+          className="z-(--z-content) absolute bottom-[15px] right-[15px]"
           onClick={() => addProductToCart(productValue)}
         />
         <ColorSelector
