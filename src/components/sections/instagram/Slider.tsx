@@ -14,13 +14,7 @@ export function InstagramSlider({ photos }: InstagramSliderProps) {
   return (
     <Swiper spaceBetween={20} slidesPerView="auto" className="mt-12 overflow-visible!">
       {photos.map(p => (
-        <SwiperSlide
-          key={p.imgPath}
-          className="
-            w-25! h-25!
-            sm:w-[250px]! sm:h-[250px]!
-          "
-        >
+        <SwiperSlide key={p.imgPath} className="w-25! h-25! sm:w-[250px]! sm:h-[250px]!">
           <InstagramCard {...p} />
         </SwiperSlide>
       ))}

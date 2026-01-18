@@ -19,15 +19,11 @@ export function Collapse({
 }: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false)
 
-  function toggleVisible() {
-    setIsOpen(!isOpen)
-  }
-
   const colorClass = clsx(
     color === 'black' && 'text-neutral-900 hover:text-neutral-500',
     color === 'gray' && 'text-neutral-500 hover:text-neutral-400',
   )
-  const cn = clsx(
+  const labelClass = clsx(
     `group
     flex justify-between items-center
     py-4
@@ -36,26 +32,22 @@ export function Collapse({
     select-none cursor-pointer`,
     colorClass,
   )
+  const innerClass = clsx(
+    `pl-4
+    overflow-hidden
+    transition-all duration-(--duration-collapse)`,
+    isOpen
+      ? 'opacity-100 max-h-1000'
+      : 'opacity-0 max-h-0',
+  )
 
   return (
     <div className="flex flex-col">
-      <div
-        className={cn}
-        onClick={toggleVisible}
-      >
+      <div className={labelClass} onClick={() => setIsOpen(!isOpen)}>
         {label}
         {Icon ? <Icon /> : <CollapseIcon color={color} isOpen={isOpen} />}
       </div>
-      <div
-        className={clsx(
-          `pl-4
-          overflow-hidden
-          transition-all duration-(--duration-collapse)`,
-          isOpen
-            ? 'opacity-100 max-h-1000'
-            : 'opacity-0 max-h-0',
-        )}
-      >
+      <div className={innerClass}>
         {children}
       </div>
     </div>
