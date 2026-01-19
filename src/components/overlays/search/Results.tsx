@@ -1,13 +1,24 @@
 import { Button, ProductCard } from '@/components'
 import { useProductsStore } from '@/stores'
 
-export function SearchResults() {
+interface SearchResultsProps {
+  hasSearched: boolean
+}
+
+export function SearchResults({ hasSearched }: SearchResultsProps) {
   const results = useProductsStore(state => state.searchedProducts)
+
+  if (!hasSearched)
+    return null
 
   return (
     <>
       <div className="flex justify-between py-3 border-b border-neutral-300">
-        <span className="text-neutral-600">13 results</span>
+        <span className="text-neutral-600">
+          {results.length}
+          {' '}
+          {results.length === 1 ? 'result' : 'results'}
+        </span>
         <Button variant="text" color="gray" to="/">View all</Button>
       </div>
       <ul
@@ -20,7 +31,7 @@ export function SearchResults() {
           lg:max-h-[calc(100dvh-338px)] lg:grid-cols-4
         "
       >
-        {results && results.map(p => (
+        {results.map(p => (
           <li key={p.id} className="mb-14 w-[48%] md:w-auto">
             <ProductCard {...p} />
           </li>

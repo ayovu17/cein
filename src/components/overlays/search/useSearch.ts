@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import { useDebounceValue } from '@/hooks'
 import { useProductsStore } from '@/stores'
 
-export function useSearchInput() {
+export function useSearch() {
   const [value, setValue] = useState('')
-  const { searchProducts } = useProductsStore()
   const debouncedValue = useDebounceValue({ value, delay: 500 })
+  const [hasSearched, setHasSearched] = useState(false)
+  const { searchProducts } = useProductsStore()
 
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     setValue(e.target.value)
@@ -15,8 +16,14 @@ export function useSearchInput() {
   }
 
   useEffect(() => {
-    searchProducts(debouncedValue)
-  }, [searchProducts, debouncedValue])
+    if (debouncedValue)
+      setHasSearched(true)
+  }, [debouncedValue])
 
-  return { value, onChange, reset }
+  useEffect(() => {
+    if (hasSearched)
+      searchProducts(debouncedValue)
+  }, [hasSearched, searchProducts, debouncedValue])
+
+  return { value, onChange, reset, hasSearched }
 }
