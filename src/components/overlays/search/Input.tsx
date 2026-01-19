@@ -1,10 +1,19 @@
 import { useEffect, useRef } from 'react'
 import { Button, Input, SearchIcon, XIcon } from '@/components'
-import { useSearchInput } from './useSearchInput'
 
-export function SearchInput() {
+interface SearchInputProps {
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  reset: () => void
+}
+
+export function SearchInput({ value, onChange, reset }: SearchInputProps) {
   const inputRef = useRef<HTMLInputElement | null>(null)
-  const { value, onChange, reset } = useSearchInput()
+
+  function handleReset() {
+    reset()
+    inputRef.current?.focus()
+  }
 
   useEffect(() => {
     inputRef.current?.focus()
@@ -23,7 +32,7 @@ export function SearchInput() {
       <Button
         variant="icon"
         icon={XIcon}
-        onClick={reset}
+        onClick={handleReset}
       />
     </div>
   )
