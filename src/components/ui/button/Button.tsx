@@ -5,6 +5,7 @@ type ButtonVariant = 'contain' | 'text' | 'icon'
 type ButtonWidth = 'default' | 'full' | 'fit'
 type ButtonSize = 'xs' | 'sm' | 'md'
 type ButtonColor = 'white' | 'black' | 'gray'
+type ButtonIconPosition = 'start' | 'end'
 
 interface BaseButtonProps {
   variant: ButtonVariant
@@ -12,6 +13,7 @@ interface BaseButtonProps {
   size?: ButtonSize
   color?: ButtonColor
   icon?: React.ComponentType
+  iconPosition?: ButtonIconPosition
   children?: React.ReactNode
 }
 type AsButton = BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -52,7 +54,8 @@ export function Button(props: ButtonProps) {
     size === 'md' && 'text-(length:--text400) leading-(--leading400)',
   )
   const cn = clsx(
-    `h-10.5
+    `flex items-center gap-1
+    h-10.5
     transition-colors duration-(--duration-button)
     cursor-pointer`,
     variantClass,
@@ -62,17 +65,18 @@ export function Button(props: ButtonProps) {
   )
 
   if (isLink(props)) {
-    const { variant, width, size, color, icon: Icon, className, children, to, ...rest } = props
+    const { variant, width, size, color, icon: Icon, iconPosition = 'start', className, children, to, ...rest } = props
 
     return (
       <Link to={to} className={cn} {...rest}>
-        {Icon && <Icon />}
+        {Icon && iconPosition === 'start' && <Icon />}
         {children}
+        {Icon && iconPosition === 'end' && <Icon />}
       </Link>
     )
   }
   else {
-    const { type = 'button', variant, width, size, color, icon: Icon, className, children, ...rest } = props
+    const { type = 'button', variant, width, size, color, icon: Icon, iconPosition = 'start', className, children, ...rest } = props
 
     return (
       <button
@@ -80,8 +84,9 @@ export function Button(props: ButtonProps) {
         className={cn}
         {...rest}
       >
-        {Icon && <Icon />}
+        {Icon && iconPosition === 'start' && <Icon />}
         {children}
+        {Icon && iconPosition === 'end' && <Icon />}
       </button>
     )
   }
