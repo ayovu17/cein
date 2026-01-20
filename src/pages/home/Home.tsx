@@ -1,6 +1,6 @@
 import { Suspense, useState } from 'react'
 import {
-  LazyCategorySection,
+  LazyFeaturedSection,
   LazyGoodsSection,
   LazyInstagramSection,
   LazyLookbookSection,
@@ -16,7 +16,7 @@ export function HomePage() {
   return (
     <>
       <MainSection />
-      <Suspense fallback={null}><LazyCategorySection /></Suspense>
+      <Suspense fallback={null}><LazyFeaturedSection /></Suspense>
       <Suspense fallback={null}><LazyGoodsSection /></Suspense>
       <Suspense fallback={null}><LazyLookbookSection ref={setLookbookRef} /></Suspense>
       <Suspense fallback={null}><LazyPhilosophySection /></Suspense>
