@@ -4,6 +4,5 @@ export function PlusIcon() {
       <path className="stroke-neutral-900" d="M3.75 12H20.25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       <path className="stroke-neutral-900" d="M12 3.75V20.25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-
   )
 }

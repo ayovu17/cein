@@ -4,6 +4,5 @@ export function XIcon() {
       <path className="stroke-neutral-900" d="M18.75 5.25L5.25 18.75" strokeLinecap="round" strokeLinejoin="round" />
       <path className="stroke-neutral-900" d="M18.75 18.75L5.25 5.25" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
-
   )
 }

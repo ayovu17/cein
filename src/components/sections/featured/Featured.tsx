@@ -1,5 +1,5 @@
 import { Typography } from '@/components'
-import { CategoryList } from './List'
+import { FeaturedList } from './List'
 
 const mockData = [
   {
@@ -19,7 +19,7 @@ const mockData = [
   },
 ]
 
-function CategorySection() {
+function FeaturedSection() {
   return (
     <section className="container py-8">
       <Typography variant="text-600" tag="h1" className="p-4">
@@ -27,9 +27,9 @@ function CategorySection() {
         <br />
         Our range is crafted sustainably with longevity in mind.
       </Typography>
-      <CategoryList categories={mockData} />
+      <FeaturedList featured={mockData} />
     </section>
   )
 }
 
-export default CategorySection
+export default FeaturedSection
