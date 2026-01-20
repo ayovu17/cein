@@ -1,4 +1,5 @@
 export * from './Bag'
+export * from './CaretDown'
 export * from './Heart'
 export * from './Instagram'
 export * from './Logo'
