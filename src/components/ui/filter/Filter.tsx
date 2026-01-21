@@ -6,16 +6,28 @@ interface FilterProps {
   onClick: (title: string) => void
 }
 
-export function Filter({ title, isActive = false, onClick }: FilterProps) {
+export function Filter({
+  title,
+  isActive = false,
+  onClick,
+}: FilterProps) {
   const cn = clsx(
     `px-4 py-1
-    border border-neutral-900 rounded-4xl
+    text-(length:--text300) leading-(--leading300)
+    border border-neutral-800 rounded-4xl
     transition-colors duration-(--duration-filter)
-    select-none cursor-pointer`,
-    isActive ? 'text-neutral-50 bg-neutral-900' : 'text-neutral-900 bg-white',
+    cursor-pointer
+    hover:bg-neutral-200`,
+    isActive ? 'text-neutral-50 bg-neutral-900' : 'text-neutral-800 bg-white',
   )
 
   return (
-    <div className={cn} onClick={() => onClick(title)}>{title}</div>
+    <button
+      type="button"
+      className={cn}
+      onClick={() => onClick(title)}
+    >
+      {title}
+    </button>
   )
 }
