@@ -43,10 +43,14 @@ export function Collapse({
 
   return (
     <div className="flex flex-col">
-      <div className={labelClass} onClick={() => setIsOpen(!isOpen)}>
+      <button
+        type="button"
+        className={labelClass}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {label}
         {Icon ? <Icon /> : <CollapseIcon color={color} isOpen={isOpen} />}
-      </div>
+      </button>
       <div className={innerClass}>
         {children}
       </div>
