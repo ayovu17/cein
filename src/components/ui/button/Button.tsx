@@ -56,7 +56,7 @@ export function Button(props: ButtonProps) {
   const cn = clsx(
     `flex items-center gap-1
     h-10.5
-    transition-colors duration-(--duration-button)
+    transition-colors duration-(--duration-ui)
     cursor-pointer`,
     variantClass,
     widthClass,
