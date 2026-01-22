@@ -8,7 +8,7 @@ export function Input({ invisible = false, className, ...props }: InputProps) {
   const cn = clsx(
     `px-3.5 py-3
     w-full
-    transition-colors duration-(--duration-input)
+    transition-colors duration-(--duration-ui)
     focus:border-neutral-900`,
     !invisible && 'border-1 border-white-smoke-200',
     className,

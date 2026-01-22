@@ -15,7 +15,7 @@ export function Filter({
     `px-4 py-1
     text-(length:--text300) leading-(--leading300)
     border border-neutral-800 rounded-4xl
-    transition-colors duration-(--duration-filter)
+    transition-colors duration-(--duration-ui)
     cursor-pointer
     hover:bg-neutral-200`,
     isActive ? 'text-neutral-50 bg-neutral-900' : 'text-neutral-800 bg-white',

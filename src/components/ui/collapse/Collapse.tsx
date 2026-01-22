@@ -28,14 +28,14 @@ export function Collapse({
     flex justify-between items-center
     py-4
     w-full
-    transition-colors duration-(--duration-collapse)
+    transition-colors duration-(--duration-ui)
     select-none cursor-pointer`,
     colorClass,
   )
   const innerClass = clsx(
     `pl-4
     overflow-hidden
-    transition-all duration-(--duration-collapse)`,
+    transition-all duration-(--duration-ui)`,
     isOpen
       ? 'opacity-100 max-h-1000'
       : 'opacity-0 max-h-0',
