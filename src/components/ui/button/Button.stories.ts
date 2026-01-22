@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { SearchIcon } from '@/components'
+import { CaretDown, PlusIcon, SearchIcon } from '@/components'
 import { Button } from './Button'
 
 const meta = {
@@ -54,6 +54,24 @@ export const TextXSGray: Story = {
     size: 'xs',
     color: 'gray',
     children: 'Button',
+  },
+}
+
+export const TextWithIconStart: Story = {
+  args: {
+    variant: 'text',
+    icon: PlusIcon,
+    iconPosition: 'start',
+    children: 'Sort',
+  },
+}
+
+export const TextWithIconEnd: Story = {
+  args: {
+    variant: 'text',
+    icon: CaretDown,
+    iconPosition: 'end',
+    children: 'Sort',
   },
 }
 

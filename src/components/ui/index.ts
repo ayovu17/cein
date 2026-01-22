@@ -1,6 +1,7 @@
 export * from './button/Button'
 export * from './collapse/Collapse'
 export * from './colorPicker/ColorPicker'
+export * from './dropdown/Dropdown'
 export * from './filter/Filter'
 export * from './icon'
 export * from './input/Input'
