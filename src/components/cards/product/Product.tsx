@@ -58,7 +58,7 @@ export function ProductCard({
           isVisible={isColorSelectorVisible}
         />
       </div>
-      <div>
+      <div className="pt-3">
         <Typography variant="text-300" tag="p" className="truncate">{title}</Typography>
         <Typography variant="text-300" tag="span">{`$${price}`}</Typography>
       </div>
