@@ -17,11 +17,10 @@ export function useProductCard({
   imgPath,
 }: UseProductCardProps) {
   const [isColorSelectorVisible, setIsColorSelectorVisible] = useState(false)
-  const [selectedColor, setSelectedColor] = useState(color)
-  const [productValue, _] = useState<CartProduct>({
+  const [productValue, setProductValue] = useState<CartProduct>({
     id,
     title,
-    color: selectedColor,
+    color,
     size: 'm',
     count: 1,
     price,
@@ -33,8 +32,11 @@ export function useProductCard({
     isColorSelectorVisible,
     showColorSelector: () => setIsColorSelectorVisible(true),
     hideColorSelector: () => setIsColorSelectorVisible(false),
-    selectedColor,
-    selectColor: (c: Color) => setSelectedColor(c),
+    selectedColor: productValue.color,
+    selectColor: (c: Color) => setProductValue(prev => ({
+      ...prev,
+      color: c,
+    })),
     productValue,
   }
 }
