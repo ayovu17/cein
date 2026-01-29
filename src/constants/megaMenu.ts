@@ -5,75 +5,75 @@ export const MEGA_MENU: Record<string, Record<string, Link[]>> = {
     Categories: [
       {
         label: 'Bags',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Clothing',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Leather Goods',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Accessories',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Gifts',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Shop All',
-        to: '/',
+        to: '/shop',
       },
     ],
     Featured: [
       {
         label: 'New Arrivals',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Bestsellers',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Trending Now',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Loungewear',
-        to: '/',
+        to: '/shop',
       },
     ],
     Collections: [
       {
         label: 'Party And Events',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Office Looks',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Selection',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Online Exclusive',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Knitwear',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Total Look',
-        to: '/',
+        to: '/shop',
       },
       {
         label: 'Basics',
-        to: '/',
+        to: '/shop',
       },
     ],
   },

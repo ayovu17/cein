@@ -5,17 +5,17 @@ const mockData = [
   {
     name: 'New Arrivals',
     imgPath: '/img/new-arrivals.webp',
-    to: '/',
+    to: '/shop',
   },
   {
     name: 'The Casual Edit',
     imgPath: '/img/the-casual-edit.webp',
-    to: '/',
+    to: '/shop',
   },
   {
     name: 'Best-Sellers',
     imgPath: '/img/best-sellers.webp',
-    to: '/',
+    to: '/shop',
   },
 ]
 

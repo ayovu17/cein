@@ -23,7 +23,7 @@ export function MainSection() {
           <br />
           Choices
         </Typography>
-        <Button variant="contain" color="white" to="/" className="ml-4 lg:ml-8">Shop Now</Button>
+        <Button variant="contain" color="white" to="/shop" className="ml-4 lg:ml-8">Shop Now</Button>
       </div>
     </section>
   )
